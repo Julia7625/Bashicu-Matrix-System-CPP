@@ -91,6 +91,8 @@ struct BMS {
 
         if (first_zero == 0) {
             // the last column is (0,0,...,0,0) so we just remove it
+            matrix.pop_back();
+            columns--;
             return;
         }
         // first_zero is the index of the first zero in the last column of the matrix
